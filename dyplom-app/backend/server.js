@@ -60,6 +60,15 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// Root — podgląd bez 404 (API jest pod /api)
+app.get('/', (req, res) => {
+  res.json({
+    service: 'MoveMint API',
+    message: 'Backend REST — użyj ścieżek /api/* (np. GET /api/health).',
+    health: '/api/health',
+  });
+});
+
 // Обработка 404
 app.use((req, res) => {
   res.status(404).json({ error: 'Nie znaleziono endpointu' });

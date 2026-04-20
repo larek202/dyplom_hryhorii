@@ -51,7 +51,7 @@ function StreetGooglePlacesField({ value, onChange, id }) {
       componentRestrictions: { country: 'pl' },
       fields: ['address_components', 'formatted_address', 'name'],
     });
-    const listener = autocomplete.addListener('place_changed', () => {
+    autocomplete.addListener('place_changed', () => {
       const place = autocomplete.getPlace();
       const line = parseFilterAddressLineFromPlace(place);
       if (line && onChangeRef.current) {
@@ -60,7 +60,13 @@ function StreetGooglePlacesField({ value, onChange, id }) {
     });
 
     return () => {
-      listener.remove();
+      try {
+        if (typeof google !== 'undefined' && google.maps?.event) {
+          google.maps.event.clearInstanceListeners(autocomplete);
+        }
+      } catch {
+        /* Places już odmontowane */
+      }
     };
   }, [isLoaded, loadError]);
 
