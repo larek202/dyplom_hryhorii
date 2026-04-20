@@ -1,0 +1,113 @@
+/**
+ * MoveMint — premium design tokens (light, desktop-first)
+ */
+:root {
+  color-scheme: light;
+
+  --mm-primary: #3b82f6;
+  --mm-primary-hover: #2563eb;
+  --mm-primary-mid: #60a5fa;
+  --mm-primary-soft: rgba(59, 130, 246, 0.12);
+  --mm-primary-glow: rgba(59, 130, 246, 0.18);
+
+  --mm-text: #0c1222;
+  --mm-text-secondary: #5c6578;
+  --mm-text-tertiary: #8b95a8;
+
+  --mm-bg: #f1f5f9;
+  --mm-bg-elevated: #fafbfc;
+  --mm-surface: #ffffff;
+  --mm-surface-elevated: #ffffff;
+  --mm-border: rgba(15, 23, 42, 0.08);
+  --mm-border-strong: rgba(15, 23, 42, 0.12);
+  --mm-border-hairline: rgba(15, 23, 42, 0.06);
+
+  --mm-radius: 12px;
+  --mm-radius-sm: 10px;
+  --mm-radius-card: 16px;
+  --mm-radius-pill: 999px;
+
+  /* Layered, soft shadows */
+  --mm-shadow-xs: 0 1px 0 rgba(15, 23, 42, 0.04);
+  --mm-shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 2px 8px rgba(15, 23, 42, 0.04);
+  --mm-shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 12px 24px -4px rgba(15, 23, 42, 0.08);
+  --mm-shadow-lg: 0 8px 16px -4px rgba(15, 23, 42, 0.06), 0 24px 48px -12px rgba(15, 23, 42, 0.12);
+  --mm-shadow-card-hover: 0 12px 24px -6px rgba(15, 23, 42, 0.1), 0 32px 64px -16px rgba(59, 130, 246, 0.08);
+
+  --mm-sidebar-width: 280px;
+  --mm-topbar-height: 72px;
+  --mm-content-max: 1440px;
+
+  /* Spacing scale (4px base) */
+  --mm-space-1: 4px;
+  --mm-space-2: 8px;
+  --mm-space-3: 12px;
+  --mm-space-4: 16px;
+  --mm-space-5: 20px;
+  --mm-space-6: 24px;
+  --mm-space-7: 28px;
+  --mm-space-8: 32px;
+  --mm-space-9: 40px;
+  --mm-space-10: 48px;
+
+  --mm-space-page: clamp(var(--mm-space-6), 2.5vw, var(--mm-space-9));
+  --mm-space-section: var(--mm-space-8);
+
+  --mm-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  /* Motion */
+  --mm-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --mm-ease-soft: cubic-bezier(0.33, 1, 0.68, 1);
+  --mm-duration: 0.22s;
+  --mm-duration-slow: 0.5s;
+}
+
+@keyframes mm-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mm-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --mm-duration: 0.01ms;
+    --mm-duration-slow: 0.01ms;
+  }
+
+  .mm-event-card,
+  .mm-event-card__media img,
+  .mm-event-grid .mm-event-card,
+  .mm-page-header {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .mm-event-card:hover {
+    transform: none !important;
+  }
+
+  .mm-event-card:hover .mm-event-card__media img {
+    transform: none !important;
+  }
+
+  .mm-auth-card,
+  .mm-empty-state,
+  .mm-error-panel,
+  .mm-page-header {
+    animation: none !important;
+  }
+}

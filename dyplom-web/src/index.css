@@ -1,0 +1,41 @@
+@import './styles/tokens.css';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--mm-font);
+  font-size: 15px;
+  line-height: 1.58;
+  letter-spacing: -0.015em;
+  color: var(--mm-text);
+  background: var(--mm-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11', 'liga' 1, 'calt' 1;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: var(--mm-primary);
+  transition: color var(--mm-duration) var(--mm-ease-soft);
+}
+
+a:hover {
+  color: var(--mm-primary-hover);
+}
+
+strong {
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}

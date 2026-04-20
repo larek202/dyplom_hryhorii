@@ -1,0 +1,75 @@
+{
+  "expo": {
+    "name": "dyplom-app",
+    "slug": "dyplom-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.dyplom-app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.anonymous.dyplomapp",
+      "googleServicesFile": "./google-services.json",
+      "config": {
+        "googleMaps": {
+          "apiKey": ""
+        }
+      },
+      "permissions": [
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "projectId": "ffe81dca-e768-4b0f-a1d9-3345a6d92fbf",
+      "eas": {
+        "projectId": "ffe81dca-e768-4b0f-a1d9-3345a6d92fbf"
+      }
+    },
+    "plugins": [
+      "@react-native-community/datetimepicker",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true
+          }
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Zezwól aplikacji na dostęp do lokalizacji, aby wyświetlić mapę."
+        }
+      ],
+      [
+        "expo-maps",
+        {
+          "apiKey": {
+            "android": "",
+            "ios": ""
+          }
+        }
+      ],
+      "./app.plugin.js"
+    ],
+    "owner": "larek202"
+  }
+}

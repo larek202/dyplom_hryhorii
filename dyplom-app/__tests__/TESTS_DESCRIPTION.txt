@@ -1,0 +1,23 @@
+20 testów jednostkowych
+
+1) auth/setCredentials – sprawdza ustawienie usera, statusu i tokenu oraz zapis tokenu w AsyncStorage.
+2) auth/logout – sprawdza wyczyszczenie danych użytkownika i usunięcie tokenu z AsyncStorage.
+3) auth/updateUser – sprawdza scalanie nowych pól profilu z istniejącym obiektem usera.
+4) favorites/addFavorite – sprawdza, że to samo id nie jest dodawane podwójnie.
+5) favorites/logout – sprawdza reset listy polubień po wylogowaniu.
+6) auth/promoteToOrganizer – sprawdza zmianę roli na organizer oraz status authenticated.
+7) bookings/setBookings – sprawdza ochronę przed niepoprawnym payloadem (nie‑tablica).
+8) bookings/addBooking – sprawdza dodanie nowej rezerwacji do listy.
+9) bookings/cancelBooking – sprawdza usunięcie rezerwacji po id.
+10) utils/uploadImages – sprawdza zwrócenie pustej listy dla pustego inputu.
+11) utils/uploadImages – sprawdza zwrócenie tylko remote URL bez wywołania fetch.
+12) utils/uploadImages – sprawdza łączenie remote + nowych URL po uploadzie.
+13) utils/uploadImages – sprawdza błąd przy response.ok === false.
+14) utils/uploadImages – sprawdza błąd, gdy response.json() rzuca wyjątek.
+15) EventCard – sprawdza, że wyświetlane są tylko 2 kategorie i znak “+” przy większej liczbie.
+16) EventCard – sprawdza, że polubione serce ma kolor czerwony.
+17) EventCard – sprawdza wywołanie onFavoriteToggle z id wydarzenia.
+18) EventCard – sprawdza wywołanie onPress i onBook po kliknięciu.
+19) EventCard – sprawdza placeholder, gdy brak images i image.
+20) EventCard – sprawdza, że pole category jest użyte, gdy brak categories.
+

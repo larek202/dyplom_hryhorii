@@ -1,0 +1,67 @@
+/**
+ * Google Places Autocomplete renders .pac-container on document.body.
+ * These overrides align the dropdown with MoveMint tokens and MUI inputs.
+ */
+
+.pac-container {
+  font-family: var(--mm-font) !important;
+  margin-top: 6px !important;
+  margin-left: 0 !important;
+  border-radius: var(--mm-radius-sm) !important;
+  border: 1px solid var(--mm-border-strong) !important;
+  box-shadow: var(--mm-shadow-md) !important;
+  background: var(--mm-surface) !important;
+  padding: var(--mm-space-1) 0 !important;
+  overflow: hidden;
+  z-index: 3000 !important;
+  box-sizing: border-box !important;
+}
+
+.pac-item {
+  padding: 10px 14px !important;
+  border: none !important;
+  border-top: 1px solid transparent !important;
+  cursor: pointer;
+  font-size: 0.9375rem !important;
+  line-height: 1.4 !important;
+  color: var(--mm-text) !important;
+  transition: background-color var(--mm-duration) var(--mm-ease-out);
+}
+
+.pac-item:first-child {
+  border-top: none !important;
+}
+
+.pac-item:hover,
+.pac-item-selected {
+  background: var(--mm-primary-soft) !important;
+}
+
+.pac-icon {
+  display: none !important;
+}
+
+.pac-item-query {
+  font-size: inherit !important;
+  font-weight: 500 !important;
+  color: var(--mm-text) !important;
+}
+
+.pac-matched {
+  font-weight: 600 !important;
+  color: var(--mm-primary) !important;
+}
+
+/* Attribution row — keep visible (Places terms); soften container */
+.pac-logo {
+  padding: var(--mm-space-2) var(--mm-space-3) var(--mm-space-2) !important;
+  margin: 0 !important;
+  border-top: 1px solid var(--mm-border-hairline) !important;
+  background: var(--mm-bg-elevated) !important;
+  text-align: right !important;
+}
+
+.hdpi.pac-logo:after {
+  background-size: 72px 14px !important;
+  margin: 0 0 0 auto !important;
+}

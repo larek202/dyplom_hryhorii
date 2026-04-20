@@ -1,0 +1,165 @@
+/* —— Page header —— */
+.mm-page-header {
+  margin-bottom: clamp(var(--mm-space-8), 3.2vw, var(--mm-space-10));
+  padding-bottom: var(--mm-space-6);
+  border-bottom: 1px solid var(--mm-border-hairline);
+  animation: mm-fade-in var(--mm-duration-slow) var(--mm-ease-out) both;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+@media (max-width: 599.95px) {
+  .mm-page-header {
+    margin-bottom: var(--mm-space-6);
+    padding-bottom: var(--mm-space-4);
+  }
+
+  .mm-page-title {
+    font-size: clamp(1.5rem, 5vw + 0.75rem, 1.875rem);
+  }
+}
+
+.mm-page-title {
+  margin: 0 0 var(--mm-space-4);
+  font-size: clamp(1.875rem, 1.6vw + 1.4rem, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  line-height: 1.12;
+  color: var(--mm-text);
+}
+
+.mm-page-sub {
+  margin: 0;
+  max-width: 52ch;
+  font-size: 1rem;
+  line-height: 1.65;
+  letter-spacing: -0.02em;
+  color: var(--mm-text-secondary);
+}
+
+/* —— Event grid —— */
+.mm-event-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(var(--mm-space-6), 2.4vw, var(--mm-space-9));
+  align-items: stretch;
+}
+
+@media (max-width: 1100px) {
+  .mm-event-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .mm-event-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* —— Event card (MUI Card + hover) —— */
+.mm-event-card {
+  position: relative;
+  animation: mm-rise var(--mm-duration-slow) var(--mm-ease-out) backwards;
+  transition:
+    box-shadow var(--mm-duration-slow) var(--mm-ease-out),
+    transform var(--mm-duration-slow) var(--mm-ease-out),
+    border-color var(--mm-duration) var(--mm-ease-soft);
+}
+
+.mm-event-grid .mm-event-card:nth-child(1) {
+  animation-delay: 0.04s;
+}
+.mm-event-grid .mm-event-card:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.mm-event-grid .mm-event-card:nth-child(3) {
+  animation-delay: 0.12s;
+}
+.mm-event-grid .mm-event-card:nth-child(4) {
+  animation-delay: 0.16s;
+}
+.mm-event-grid .mm-event-card:nth-child(5) {
+  animation-delay: 0.2s;
+}
+.mm-event-grid .mm-event-card:nth-child(6) {
+  animation-delay: 0.24s;
+}
+.mm-event-grid .mm-event-card:nth-child(7) {
+  animation-delay: 0.28s;
+}
+.mm-event-grid .mm-event-card:nth-child(8) {
+  animation-delay: 0.32s;
+}
+.mm-event-grid .mm-event-card:nth-child(9) {
+  animation-delay: 0.36s;
+}
+.mm-event-grid .mm-event-card:nth-child(10) {
+  animation-delay: 0.4s;
+}
+.mm-event-grid .mm-event-card:nth-child(11) {
+  animation-delay: 0.44s;
+}
+.mm-event-grid .mm-event-card:nth-child(12) {
+  animation-delay: 0.48s;
+}
+
+.mm-event-card:focus-visible {
+  outline: 2px solid var(--mm-primary);
+  outline-offset: 2px;
+}
+
+/* —— Error state —— */
+.mm-error-panel {
+  padding: var(--mm-space-7) var(--mm-space-8);
+  border-radius: var(--mm-radius-card);
+  border: 1px solid rgba(248, 113, 113, 0.35);
+  background: linear-gradient(165deg, #fff5f5 0%, #fef2f2 100%);
+  box-shadow: var(--mm-shadow-sm);
+  animation: mm-fade-in var(--mm-duration-slow) var(--mm-ease-out) both;
+}
+
+.mm-error-panel h2 {
+  margin: 0 0 var(--mm-space-3);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: #991b1b;
+}
+
+.mm-error-panel p {
+  margin: 0 0 var(--mm-space-4);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: #b91c1c;
+}
+
+.mm-error-panel code {
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.85);
+  padding: var(--mm-space-1) var(--mm-space-2);
+  border-radius: var(--mm-radius-sm);
+}
+
+.mm-error-hint {
+  margin: 0 0 var(--mm-space-4) !important;
+  font-size: 0.8125rem !important;
+  line-height: 1.55 !important;
+  color: #7f1d1d !important;
+  opacity: 0.95;
+}
+
+.mm-empty-state {
+  padding: var(--mm-space-10) var(--mm-space-8);
+  text-align: center;
+  border-radius: var(--mm-radius-card);
+  border: 1px dashed var(--mm-border-strong);
+  background: var(--mm-surface);
+  color: var(--mm-text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  letter-spacing: -0.02em;
+  box-shadow: var(--mm-shadow-xs);
+  animation: mm-rise var(--mm-duration-slow) var(--mm-ease-out) both;
+}

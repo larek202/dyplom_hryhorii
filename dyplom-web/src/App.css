@@ -1,0 +1,57 @@
+/* Wspólne style dla stron poza siatką mm-* */
+.page-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.65rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--mm-text);
+}
+
+.placeholder-page .page-title {
+  margin-bottom: 0.75rem;
+}
+
+.muted {
+  color: var(--mm-text-secondary);
+}
+
+.summary {
+  margin: 0 0 1.25rem;
+}
+
+.small {
+  font-size: 0.875rem;
+}
+
+.panel {
+  padding: 1rem 1.25rem;
+  border-radius: var(--mm-radius);
+  border: 1px solid var(--mm-border);
+  background: var(--mm-surface);
+  box-shadow: var(--mm-shadow-sm);
+}
+
+.panel-error {
+  border-color: #fecaca;
+  background: #fef2f2;
+}
+
+.panel-error strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+code {
+  font-size: 0.85em;
+  padding: 0.1em 0.35em;
+  border-radius: 6px;
+  background: var(--mm-bg);
+}
+
+.mm-auth-heading {
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--mm-text);
+}
